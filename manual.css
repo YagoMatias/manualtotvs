@@ -1,0 +1,386 @@
+/*
+  manual.css - Estilos principais do Manual TOTVS - CROSBY
+  Cada bloco de CSS está comentado para explicar sua função.
+*/
+
+/* =====================
+   Variáveis Globais
+   ===================== */
+:root {
+    /* Cores principais do layout */
+    --color-bg: #f7f8fa;              /* Fundo geral */
+    --color-surface: #fff;             /* Fundo de cartões e containers */
+    --color-primary: #2a3a5e;          /* Azul escuro para títulos e links */
+    --color-accent: #3bb273;           /* Verde para destaques */
+    --color-highlight: #2a3a5e;        /* Cor de destaque para subtítulos */
+    --color-text: #23272f;             /* Cor principal do texto */
+    --color-muted: #7a7a7a;            /* Texto secundário */
+    --color-border: #e3e6eb;           /* Bordas suaves */
+    --radius: 10px;                    /* Raio de borda padrão */
+    --shadow: 0 2px 8px rgba(44, 62, 80, 0.04); /* Sombra leve */
+    /* Tipografia */
+    --font-main: 'Inter', Arial, Helvetica, sans-serif;
+    --font-size-base: 1.08rem;
+    --font-size-h1: 2.1rem;
+    --font-size-h2: 1.4rem;
+    --font-size-h3: 1.1rem;
+    /* Espaçamentos */
+    --space-section: 2.5rem;
+    --space-block: 1.5rem;
+}
+
+/* =====================
+   Layout e Estrutura
+   ===================== */
+html {
+    scroll-behavior: smooth; /* Suaviza a rolagem ao navegar pelo sumário */
+}
+body {
+    font-family: var(--font-main);
+    background: var(--color-bg);
+    color: var(--color-text);
+    margin: 0;
+    padding: 0;
+    font-size: var(--font-size-base);
+    line-height: 1.7;
+}
+
+/* =====================
+   Cabeçalho (Header) - Imagem única e H2 branco
+   ===================== */
+header {
+    background: #000638;
+    border-bottom: 1px solid var(--color-border);
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.2rem;
+}
+.header-logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.header-logos img {
+    height: 8rem;
+    max-width: 30rem;
+    min-width: 25rem;
+    width: auto;
+    object-fit: contain;
+    background: none;
+    border-radius: 0;
+    padding: 0;
+    box-shadow: none;
+    display: block;
+}
+header h2 {
+    color: #fff;
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin: 0.7rem 0 0 0;
+    letter-spacing: 1px;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+/* =====================
+   Sumário/Navegação
+   ===================== */
+nav.sumario {
+    background: var(--color-surface);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    margin: 2rem auto 2.5rem auto;
+    padding: 1.5rem 1rem;
+    max-width: 700px;
+}
+nav.sumario h2 {
+    font-size: 1.3rem;
+    color: var(--color-primary);
+    margin-bottom: 1rem;
+    font-weight: 600;
+    border-bottom: 1px solid var(--color-border);
+    padding-bottom: 0.5rem;
+}
+nav.sumario ol {
+    list-style: decimal inside;
+    padding: 0;
+    margin: 0;
+}
+nav.sumario li {
+    margin-bottom: 0.7rem;
+}
+nav.sumario a {
+    color: var(--color-primary);
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 4px;
+    padding: 0.3rem 0.5rem;
+    transition: background 0.2s;
+}
+nav.sumario a:hover {
+    background: #eaf2fb;
+}
+
+/* =====================
+   Conteúdo Principal
+   ===================== */
+main {
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+section.modulo {
+    background: var(--color-surface);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    margin-bottom: var(--space-section);
+    padding: 2rem 1.5rem 1.5rem 1.5rem;
+}
+section.modulo h2 {
+    font-size: var(--font-size-h2);
+    color: var(--color-primary);
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 1.2rem;
+}
+section.modulo h3 {
+    font-size: var(--font-size-h3);
+    color: var(--color-highlight);
+    font-weight: 600;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+.content, .section .content {
+    margin-bottom: var(--space-block);
+}
+ul, ol {
+    margin: 0 0 1.2rem 1.2rem;
+    padding: 0 0 0 1.2rem;
+}
+li {
+    margin-bottom: 0.5rem;
+}
+
+/* =====================
+   Destaques e Notas
+   ===================== */
+.highlight {
+    color: var(--color-accent);
+    font-weight: 700;
+}
+.notes {
+    background: #fff5f5; /* Fundo vermelho claro */
+    color: #b71c1c; /* Texto vermelho escuro */
+    border-left: 3px solid #e57373; /* Borda vermelha */
+    padding: 1rem 1.2rem;
+    border-radius: 6px;
+    margin: 1.5rem 0 0.5rem 0;
+    font-size: 0.98em;
+}
+.notes strong {
+    color: #b71c1c;
+    font-weight: 700;
+}
+.notes ul {
+    padding-left: 1.2rem;
+}
+.notes li {
+    color: #b71c1c;
+    margin-bottom: 0.5rem;
+}
+.notes ul li::marker, .notes ul li::before {
+    color: #b71c1c;
+}
+
+/* =====================
+   GIFs e Modal de Zoom
+   ===================== */
+.gif-placeholder {
+    background: #f5f5f5;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1.2rem 0 0 0;
+    width: 100%;
+    padding: 0;
+    overflow: hidden;
+    cursor: zoom-in; /* Indica que é clicável para zoom */
+}
+.gif-placeholder img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    border-radius: 8px;
+}
+/* Modal de GIF ampliado */
+.modal-gif-bg {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(30, 32, 38, 0.85); /* Fundo escurecido */
+    justify-content: center;
+    align-items: center;
+}
+.modal-gif-bg.active {
+    display: flex;
+}
+.modal-gif-content {
+    position: relative;
+    background: transparent;
+    border-radius: 12px;
+    max-width: 90vw;
+    max-height: 90vh;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.modal-gif-content img {
+    max-width: 90vw;
+    max-height: 80vh;
+    border-radius: 12px;
+    background: #fff;
+}
+.modal-gif-close {
+    position: absolute;
+    top: 10px;
+    right: 16px;
+    background: rgba(0,0,0,0.5);
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    transition: background 0.2s;
+}
+.modal-gif-close:hover {
+    background: rgba(0,0,0,0.8);
+}
+
+/* =====================
+   Botão Voltar ao Topo
+   ===================== */
+#backToTop {
+    display: none;
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    background: var(--color-primary);
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    font-size: 1.5rem;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: var(--shadow);
+    z-index: 100;
+    transition: background 0.2s;
+}
+#backToTop:hover {
+    background: var(--color-accent);
+}
+
+/* =====================
+   Rodapé
+   ===================== */
+footer {
+    background: var(--color-surface);
+    border-top: 1px solid var(--color-border);
+    color: var(--color-muted);
+    padding: 2.5rem 1rem 1.2rem 1rem;
+    margin-top: 3rem;
+}
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.5rem;
+    justify-content: space-between;
+    max-width: 900px;
+    margin: 0 auto 1.5rem auto;
+}
+.footer-section {
+    min-width: 220px;
+    flex: 1;
+}
+.footer-section h3 {
+    font-size: 1.1rem;
+    color: var(--color-primary);
+    font-weight: 700;
+    margin-bottom: 0.7rem;
+}
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.footer-section ul li {
+    margin-bottom: 0.5rem;
+}
+.footer-section ul li a {
+    color: var(--color-primary);
+    text-decoration: none;
+    font-weight: 600;
+}
+.footer-section ul li a:hover {
+    color: var(--color-accent);
+}
+.footer-bottom {
+    text-align: center;
+    color: var(--color-muted);
+    font-size: 0.95em;
+}
+
+/* =====================
+   Responsividade
+   ===================== */
+@media (max-width: 900px) {
+    main, nav.sumario {
+        max-width: 98vw;
+    }
+    .footer-container {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+}
+@media (max-width: 600px) {
+    header {
+        padding: 1.2rem 0.5rem 1.2rem 0.5rem;
+        gap: 1rem;
+    }
+    .header-logos img {
+        height: 5rem;
+        max-width: 240px;
+    }
+    header h2 {
+        font-size: 1rem;
+    }
+    nav.sumario {
+        padding: 1rem 0.5rem;
+    }
+    section.modulo {
+        padding: 1.2rem 0.7rem 1rem 0.7rem;
+    }
+    .footer-container {
+        gap: 1rem;
+    }
+} 
