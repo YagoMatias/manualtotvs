@@ -52,8 +52,9 @@
                 <li><a href="#saldo-em-grade">Saldo em grade</a></li>
                 <li><a href="#balanco">Balanço</a></li>
                 <li><a href="#entrada-avulsa">Entrada avulsa de mercadoria</a></li>
-                <li><a href="#saida-avulsa">Saída avulsa de mercadoria</a></li>
-                <li><a href="#kardex">Kardex</a></li>
+                                        <li><a href="#saida-avulsa">Saída avulsa de mercadoria</a></li>
+                        <li><a href="#transferencias-filiais">Transferências entre filiais</a></li>
+                        <li><a href="#kardex">Kardex</a></li>
                 <li><a href="#faturamento-vendedor">Faturamento e desempenho do vendedor</a></li>
                 <li><a href="#curva-abc">Curva ABC de vendas</a></li>
                 <li><a href="#entrada-mercadoria-nota">Entrada de mercadoria por nota fiscal</a></li>
@@ -63,6 +64,8 @@
                 <li><a href="#lancamento-despesa">Lançamento de despesa</a></li>
                 <li><a href="#consulta-duplicata">Consulta de duplicata</a></li>
                 <li><a href="#pagamento-duplicata">Pagamento de duplicata</a></li>
+                <li><a href="#reimpressao-nota-fiscal">Reimpressão de nota fiscal</a></li>
+                <li><a href="#cancelamento-transacao">Cancelamento de transação / nota fiscal</a></li>
             </ol>
         </nav>
         <section class="modulo" id="acessando-o-ambiente">
@@ -2094,6 +2097,108 @@
                 <img src="imagens manual/saida avulsa.gif" alt="">
             </div>
         </section>
+        <section class="modulo" id="transferencias-filiais">
+            <h2>MÓDULO: TRANSFERÊNCIAS ENTRE FILIAIS – TRAFM060</h2>
+            <article class="section">
+                <h3>1. Acesso ao Sistema</h3>
+                <div class="content">
+                    <ol>
+                        <li>Acesse o componente <span class="highlight">TRAFM060</span></li>
+                    </ol>
+                </div>
+            </article>
+            <article class="section">
+                <h3>2. Cadastro Básico</h3>
+                <div class="content">
+                    <ol start="2">
+                        <li>Preencha os dados principais:
+                            <ul>
+                                <li>No campo <span class="highlight">Pessoa</span>, informe o código da FILIAL para a TRANSFERÊNCIA</li>
+                                <li>No campo <span class="highlight">Vendedor</span>, insira o código do responsável pela operação</li>
+                            </ul>
+                        </li>
+                    </ol>
+                </div>
+            </article>
+            <article class="section">
+                <h3>3. Configuração da Operação</h3>
+                <div class="content">
+                    <ol start="3">
+                        <li>No campo <span class="highlight">Operação</span>:
+                            <ul>
+                                <li>Selecione <span class="highlight">TRANSFERENCIA ENTRE FRANQUIAS PROPRIAS</span></li>
+                            </ul>
+                        </li>
+                    </ol>
+                </div>
+            </article>
+            <article class="section">
+                <h3>4. Acesso aos Itens</h3>
+                <div class="content">
+                    <ol start="4">
+                        <li>Para acessar os itens da transação:
+                            <ul>
+                                <li>Pressione <span class="highlight">F5</span></li>
+                                <li>OU clique em <span class="highlight">F5 - Navegar item</span></li>
+                            </ul>
+                        </li>
+                    </ol>
+                </div>
+            </article>
+            <article class="section">
+                <h3>5. Inclusão de Produtos</h3>
+                <div class="content">
+                    <ol start="5">
+                        <li>Adicione os produtos:
+                            <ul>
+                                <li>Bipe os produtos com o leitor</li>
+                                <li>OU digite manualmente no campo <span class="highlight">Código</span></li>
+                                <li>Marque a opção <span class="highlight">"Validar código produto"</span></li>
+                                <li>Pressione <span class="highlight">Tab</span> para confirmar cada inclusão</li>
+                            </ul>
+                        </li>
+                    </ol>
+                </div>
+            </article>
+            <article class="section">
+                <h3>6. Finalização dos Itens</h3>
+                <div class="content">
+                    <ol start="6">
+                        <li>Após incluir todos os produtos:
+                            <ul>
+                                <li>Pressione <span class="highlight">F11 – Encerrar</span></li>
+                            </ul>
+                        </li>
+                    </ol>
+                </div>
+            </article>
+            <article class="section">
+                <h3>7. Confirmação Final</h3>
+                <div class="content">
+                    <ol start="7">
+                        <li>Para concluir:
+                            <ul>
+                                <li>Clique no botão <span class="highlight">CONFIRMAR</span></li>
+                                <li>O sistema registrará a transferência entre filiais</li>
+                            </ul>
+                        </li>
+                    </ol>
+                </div>
+            </article>
+            <aside class="notes">
+                <h4>Observações Importantes:</h4>
+                <ul>
+                    <li>Verifique atentamente os saldos disponíveis antes de confirmar a transferência</li>
+                    <li>A validação do código produto é essencial para evitar erros</li>
+                    <li>Para grandes quantidades, confira os produtos um a um</li>
+                    <li>O sistema gera comprovante digital da operação</li>
+                    <li>Esta operação reduz o saldo na filial de origem</li>
+                </ul>
+            </aside>
+            <div class="gif-placeholder">
+                <img src="imagens manual/trans-franquias.gif" alt="">
+            </div>
+        </section>
         <section class="modulo" id="kardex">
             <h2>MÓDULO: KARDEX – PRDFL152</h2>
             <article class="section">
@@ -3115,6 +3220,86 @@
                     <li>Pagamentos em lote estão disponíveis na opção "Filial"</li>
                 </ul>
             </aside>
+        </section>
+        <section class="modulo" id="reimpressao-nota-fiscal">
+            <h2>MÓDULO: IMPRIMIR 2ª VIA DA NOTA FISCAL</h2>
+            <article class="section">
+                <h3>1. Acesse o ambiente</h3>
+                <div class="content">
+                    <ol>
+                        <li>Acesse o componente <span class="highlight">FISFP093 – Processamento de Nota Fiscal Eletrônica</span></li>
+                        <li>Selecione a empresa fiscal correspondente</li>
+                        <li>Informe o período da data que deseja verificar as notas fiscais</li>
+                        <li>No campo <span class="highlight">"Sit. Processamento"</span>, escolha a opção <span class="highlight">TODAS</span> (para exibir notas em qualquer situação)</li>
+                        <li>Clique na lupa para pesquisar</li>
+                        <li>Na listagem apresentada, selecione o checkbox da nota fiscal que deseja imprimir</li>
+                        <li>Clique no botão <span class="highlight">"Imprimir DANFE"</span> para gerar a segunda via</li>
+                    </ol>
+                </div>
+            </article>
+            <aside class="notes">      
+                  <h4>Observações Importantes</h4>
+                  <div class="content">
+                          <li>Este procedimento segue o fluxo padrão de reimpressão no FISFP093</li>
+                          <li>Se a nota fiscal não estiver autorizada, a impressão não poderá ser realizada; nesse caso, será necessário proceder com a autorização antes da impressão</li>
+                      </aside>
+                  </div>
+                  <div class="gif-placeholder">
+                    <img src="imagens manual/segunda-via.gif" alt="segunda-via.gif">
+                </div
+        </section>
+        <section class="modulo" id="cancelamento-transacao">
+            <h2>MÓDULO: CANCELAMENTO DE TRANSAÇÃO</h2>
+            <article class="section">
+                <h3>1. Acesso ao Sistema</h3>
+                <div class="content">
+                    <ol>
+                        <li>Acesse o componente <span class="highlight">TRAFP006 – Cancelamento de Transação</span>, via campo <span class="highlight">"Procurar"</span> e tecle <span class="highlight">Tab</span> ou <span class="highlight">Enter</span></li>
+                    </ol>
+                </div>
+            </article>
+            <article class="section">
+                <h3>2. Informação da Transação</h3>
+                <div class="content">
+                    <ol>
+                        <li>Informe a data e o número da transação. Caso não saiba o número:
+                            <ul>
+                                <li>Pressione <span class="highlight">F12</span> para abrir a tela de consulta (TRAF L026)</li>
+                                <li>Filtre por data, tipo de operação (saída/entrada) e cliente</li>
+                                <li>Selecione a transação desejada com duplo clique para retornar à tela de cancelamento</li>
+                            </ul>
+                        </li>
+                    </ol>
+                </div>
+            </article>
+                         <article class="section">
+                 <h3>3. Motivo do Cancelamento</h3>
+                 <div class="content">
+                     <ol>
+                         <li>No campo <span class="highlight">Motivo</span>, informe um texto com mínimo de <span class="highlight">15 caracteres</span> — pois esse será utilizado no motivo de cancelamento da NF‑e junto à SEFAZ</li>
+                     </ol>
+                 </div>
+             </article>
+             <article class="section">
+                 <h3>4. Confirmação Final</h3>
+                 <div class="content">
+                     <ol>
+                         <li>Clique em <span class="highlight">Confirmar</span> (ou "Cancelar transação") para finalizar o processo</li>
+                         <li>Confirme a mensagem de aviso <span class="highlight">"Deseja realmente cancelar a transação?"</span> selecionando <span class="highlight">Sim</span></li>
+                     </ol>
+                 </div>
+             </article>
+            <aside class="notes">
+                <h4>Observações Importantes</h4>
+                <ul>
+                    <li>Não utilize caracteres especiais (como acentos ou cedilha) no campo Motivo ao cancelar NF‑e autorizada</li>
+                    <li>Se a NF‑e concluída já tiver ultrapassado o prazo permitido pela SEFAZ, será necessário recorrer a métodos alternativos, como cancelamento extemporâneo ou emissão de nota de devolução</li>
+                    <li>Certifique-se de que o usuário possui permissão configurada para realizar esse cancelamento no componente TRAFP006, liberada através do ADMFM023</li>
+                </ul>
+            </aside>
+            <div class="gif-placeholder">
+                <img src="imagens manual/cancel-trans.gif" alt="cancel-trans.gif">
+            </div>
         </section>
     </main>
     <!-- Modal para GIF em zoom -->
